@@ -6,7 +6,7 @@
 /*   By: abooster <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/07 14:50:39 by abooster          #+#    #+#             */
-/*   Updated: 2019/06/21 12:53:59 by abooster         ###   ########.fr       */
+/*   Updated: 2019/10/08 12:55:55 by abooster         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ int				*read_file(char *file, char **tetras)
 		ft_bzero(data.buf, 21);
 		data.count++;
 	}
-	if ((data.count - 1) > 26 || data.count == 0
+	if (data.count > 26 || data.count == 0
 			|| data.n_count > ((data.count * 5) - 1))
         return (0);
 	close(data.fd);
